@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import SimpleComponent from './components/SimpleComponent';
+import ComponentExample from './components/ComponentExample';
+import ComponentWithState from './components/ComponentWithState';
+import ComponentWithState1 from './components/ComponentWithState1';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='App'>
+      <SimpleComponent />
+      <ComponentExample />
+			<ComponentWithState />
+			<ComponentWithState1 />
+		</div>
+	);
 }
 
 export default App;
