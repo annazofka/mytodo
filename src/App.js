@@ -3,16 +3,18 @@ import './App.css';
 // import ComponentExample from './components/ComponentExample';
 // import ComponentWithState from './components/ComponentWithState';
 // import ComponentWithState1 from './components/ComponentWithState1';
-import MetricsContainer from "./components/Metrics"
+// import MetricsContainer from './components/Metrics';
+import ComponentWithUpdatingState from './components/ComponentWithUpdatingState';
 
 function App() {
 	return (
 		<div className='App'>
-      {/* <SimpleComponent />
+			{/* <SimpleComponent />
       <ComponentExample />
 			<ComponentWithState />
 			<ComponentWithState1 /> */}
-      <MetricsContainer />
+			{/* <MetricsContainer /> */}
+			<ComponentWithUpdatingState />
 		</div>
 	);
 }
