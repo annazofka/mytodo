@@ -5,7 +5,8 @@ import './App.css';
 // import ComponentWithState1 from './components/ComponentWithState1';
 // import MetricsContainer from './components/Metrics';
 // import ComponentWithUpdatingState from './components/ComponentWithUpdatingState';
-import ToDosComponent from './components/ComponentWithUpdatingStateToDoList';
+// import ToDosComponent from './components/ComponentWithUpdatingStateToDoList';
+import ComponentWithUpdatingStateCheckbox from './components/ComponentWithUpdatingStateCheckbox';
 
 function App() {
 	return (
@@ -16,7 +17,8 @@ function App() {
 			<ComponentWithState1 /> */}
 			{/* <MetricsContainer /> */}
 			{/* <ComponentWithUpdatingState /> */}
-			<ToDosComponent />
+			{/* <ToDosComponent /> */}
+			<ComponentWithUpdatingStateCheckbox />
 		</div>
 	);
 }
