@@ -4,7 +4,8 @@ import './App.css';
 // import ComponentWithState from './components/ComponentWithState';
 // import ComponentWithState1 from './components/ComponentWithState1';
 // import MetricsContainer from './components/Metrics';
-import ComponentWithUpdatingState from './components/ComponentWithUpdatingState';
+// import ComponentWithUpdatingState from './components/ComponentWithUpdatingState';
+import ToDosComponent from './components/ComponentWithUpdatingStateToDoList';
 
 function App() {
 	return (
@@ -14,7 +15,8 @@ function App() {
 			<ComponentWithState />
 			<ComponentWithState1 /> */}
 			{/* <MetricsContainer /> */}
-			<ComponentWithUpdatingState />
+			{/* <ComponentWithUpdatingState /> */}
+			<ToDosComponent />
 		</div>
 	);
 }

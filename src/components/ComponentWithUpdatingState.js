@@ -16,8 +16,6 @@ export default class ComponentWithUpdatingState extends Component {
 		console.log(alert('I did it'));
 	};
 
-	handleChange = () => {};
-
 	render() {
 		return (
 			<div>
