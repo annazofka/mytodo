@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class ToDoListSelectComponent extends Component {
 	state = {
 		todoName: '',
-		// status: false,
+		status: false,
 		dueDate: new Date().toISOString().slice(0, 10),
 		difficulty: 1,
 		todoList: [],
@@ -30,14 +30,27 @@ export default class ToDoListSelectComponent extends Component {
 		// }
 	};
 
+	handleStatusChange = event => {
+		this.setState({ status: event.target.checked });
+	};
+
 	handleAddTaskClick = event => {
+		const { todoName, status, dueDate, difficulty } = this.state;
+
 		const newTask = {
-			Task: this.state.todoName,
-			Deadline: this.state.dueDate,
-			Difficulty: this.state.difficulty,
+			todoName,
+			status,
+			dueDate,
+			difficulty,
 		};
 
-		this.setState({ todoList: [...this.state.todoList, newTask], todoName: '', dueDate: '', difficulty: '' });
+		this.setState({
+			todoList: [...this.state.todoList, newTask],
+			todoName: '',
+			status: false,
+			dueDate: '',
+			difficulty: '',
+		});
 	};
 
 	render() {
@@ -49,6 +62,8 @@ export default class ToDoListSelectComponent extends Component {
 					value={this.state.todoName}
 					onChange={event => this.setState({ todoName: event.target.value })}
 				/>
+
+				<input type='checkbox' checked={this.state.status} onChange={this.handleStatusChange} />
 				<input
 					type='date'
 					value={this.state.dueDate}
@@ -60,15 +75,6 @@ export default class ToDoListSelectComponent extends Component {
 					<option value={2}>Medium</option>
 					<option value={3}>Hard</option>
 				</select>
-				{/* <div>
-					<p>Task: {this.state.todoName}</p>
-				</div>
-				<div>
-					<p>Deadline: {this.state.dueDate}</p>
-				</div>
-				<div>
-					<p>Difficulty: {this.setDifficulty()}</p>
-				</div> */}
 
 				<button onClick={this.handleAddTaskClick}>Add Task</button>
 				{this.state.todoList.map(todo => {
@@ -78,6 +84,42 @@ export default class ToDoListSelectComponent extends Component {
 						</p>
 					);
 				})}
+
+				<div>
+					<p>Task: {this.state.todoName}</p>
+				</div>
+				<div>
+					<p>Status: {this.state.status ? 'Done' : 'Not yet done'}</p>
+				</div>
+				<div>
+					<p>Deadline: {this.state.dueDate}</p>
+				</div>
+				<div>
+					<p>Difficulty: {this.setDifficulty()}</p>
+				</div>
+
+				<table>
+					<thead>
+						<tr>
+							<th>Task</th>
+							<th>Status</th>
+							<th>Difficulty</th>
+							<th>Deadline</th>
+						</tr>
+					</thead>
+					<tbody>
+						{this.state.todoList.map(task => {
+							return (
+								<tr>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							);
+						})}
+					</tbody>
+				</table>
 			</div>
 		);
 	}
