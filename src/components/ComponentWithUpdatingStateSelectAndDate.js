@@ -9,15 +9,12 @@ export default class ToDoListSelectComponent extends Component {
 		todoList: [],
 	};
 
-	setDifficulty = () => {
-		const { difficulty } = this.state;
+	setDifficulty = difficulty => {
 		const difficultyMap = {
 			1: 'Easy',
 			2: 'Medium',
 			3: 'Hard',
 		};
-
-		return difficultyMap[difficulty];
 
 		// if (difficulty === '1') {
 		// 	return 'Easy';
@@ -28,6 +25,8 @@ export default class ToDoListSelectComponent extends Component {
 		// if (difficulty === '3') {
 		// 	return 'Hard';
 		// }
+
+		return difficultyMap[difficulty];
 	};
 
 	handleStatusChange = event => {
@@ -85,18 +84,18 @@ export default class ToDoListSelectComponent extends Component {
 					);
 				})}
 
-				<div>
+				{/* <div>
 					<p>Task: {this.state.todoName}</p>
 				</div>
 				<div>
 					<p>Status: {this.state.status ? 'Done' : 'Not yet done'}</p>
-				</div>
-				<div>
+				</div> */}
+				{/* <div>
 					<p>Deadline: {this.state.dueDate}</p>
 				</div>
 				<div>
-					<p>Difficulty: {this.setDifficulty()}</p>
-				</div>
+					<p>Difficulty: {this.setDifficulty(this.state.difficulty)}</p>
+				</div> */}
 
 				<table>
 					<thead>
@@ -110,11 +109,13 @@ export default class ToDoListSelectComponent extends Component {
 					<tbody>
 						{this.state.todoList.map(task => {
 							return (
-								<tr>
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
+								<tr key={task.todoName}>
+									<td>{task.todoName}</td>
+									<td>
+										<input type='checkbox' checked={task.status} />
+									</td>
+									<td>{this.setDifficulty(task.difficulty)}</td>
+									<td>{task.dueDate}</td>
 								</tr>
 							);
 						})}
