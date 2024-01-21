@@ -1,0 +1,15 @@
+.statistics-container {
+	background-color: #3734bd;
+	padding: 20px;
+	min-height: 200px;
+}
+
+.metrics-flex-container {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.statistics-title {
+	color: white;
+}

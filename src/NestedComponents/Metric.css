@@ -1,0 +1,10 @@
+.metric-container {
+	background-color: #b49477;
+	padding: 15px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.metric-title {
+	color: white;
+}

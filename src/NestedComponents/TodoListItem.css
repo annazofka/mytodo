@@ -1,0 +1,9 @@
+.todo-list-item-container {
+	background-color: #b49477;
+	margin: 20px;
+	padding: 10px;
+}
+
+.todo-list-item-title {
+	color: white;
+}

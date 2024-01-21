@@ -1,6 +1,8 @@
 import './App.css';
-import { Parent } from './NestedComponentsExample/Parent';
-
+import { Statistics } from './NestedComponents/Statistics';
+import { TodoForm } from './NestedComponents/TodoForm';
+import { TodoList } from './NestedComponents/TodoList';
+// import { Parent } from './NestedComponentsExample/Parent';
 // import SimpleComponent from './components/SimpleComponent';
 // import ComponentExample from './components/ComponentExample';
 // import ComponentWithState from './components/ComponentWithState';
@@ -15,7 +17,7 @@ function App() {
 	return (
 		<div className='App'>
 			{/* <SimpleComponent />
-      <ComponentExample />
+      		<ComponentExample />
 			<ComponentWithState />
 			<ComponentWithState1 /> */}
 			{/* <MetricsContainer /> */}
@@ -23,7 +25,10 @@ function App() {
 			{/* <ToDosComponent /> */}
 			{/* <ComponentWithUpdatingStateCheckbox /> */}
 			{/* <ToDoListSelectAndDateComponent /> */}
-			<Parent />
+			{/* <Parent /> */}
+			<TodoForm />
+			<Statistics />
+			<TodoList />
 		</div>
 	);
 }
