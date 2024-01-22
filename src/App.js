@@ -14,6 +14,7 @@ import { TodoList } from './NestedComponents/TodoList';
 // import ToDoListSelectAndDateComponent from './components/ComponentWithUpdatingStateSelectAndDate';
 
 function App() {
+	const todos = [{ todoName: 'Learn JavaScript' }, { todoName: 'Learn React' }];
 	return (
 		<div className='App'>
 			{/* <SimpleComponent />
@@ -26,9 +27,10 @@ function App() {
 			{/* <ComponentWithUpdatingStateCheckbox /> */}
 			{/* <ToDoListSelectAndDateComponent /> */}
 			{/* <Parent /> */}
+
 			<TodoForm />
 			<Statistics />
-			<TodoList />
+			<TodoList todoList={todos} />
 		</div>
 	);
 }
